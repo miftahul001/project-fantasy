@@ -203,7 +203,7 @@ const abc=(()=>{
 	})();
 	
 	const a1=(()=>{
-		const c=el({a:'div', b:b, d:{style:'display:flex;justify-content:space-between;gap:16px;padding:8px 16px;height:calc(16vh - 24px);background:#eee;border-radius:32px;text-align:center;'}})
+		const c=el({a:'div', b:b, d:{style:'display:flex;justify-content:space-between;gap:16px;padding:8px 16px;height:calc(16vh - 32px);background:#eee;border-radius:32px;text-align:center;'}})
 		el({a:'h3', b:el({a:'div',b:c}), c:'Next Win'})
 		const b1=el({a:'h1', b:c.children[0], c:'4296', d:{style:'position:relative;padding:8px 20px;background:rgba(0,0,0,.8);border-radius:36px 36px 36px 0;color:#fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);'}})
 		
@@ -320,7 +320,7 @@ cd.c([0,a=>{abc[0][1].textContent=a},a=>{abc[0][2].textContent=a},a=>{abc[0][3].
 (()=>{
 	const a=el({a:'div', b:el({a:'div', b:document.body, d:{style:'position:fixed;top:0;left:-100vw;;width:100vw;height:100vh;transition: 0.5s;'}}), d:{style:'position:absolute;display:flex;flex-direction:column;gap:8px;justify-content:space-between;max-width:100vw;height:100vh;background:rgba(0,0,0,.85);color:#fff;padding:8px;overflow-x: hidden;'}})
 	el({a:'img', b:el({a:'div',b:a,d:{style:'display:flex;justify-content:center;align-items:center;padding:5vh 8px 16px 8px;'}}), d:{src:'res/img/LILO-FANTASY-ICON.png', style:'width:10vh;height:10vh;border-radius:50%;'}})
-	const b=el({a:'div',b:a,d:{style:'display:flex;flex-direction:column;gap:8px;padding:16px 32px 16px 16px;'}});
+	const b=el({a:'div',b:a,d:{style:'display:flex;flex-direction:column;gap:8px;padding:16px 32px 0 16px;'}});
 	
 	(()=>{
 		const c=el({a:'div', b:b, d:{class:'menu-items'}})
