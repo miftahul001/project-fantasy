@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winner - Lilo Fantasy</title>
+<meta name="description" content="Lilo Fantasy - Winner Page">
+<meta name="keywords" content="Lilo Fantasy, Solana, NFT">
+<meta name="author" content="Miftahul Munir">
+
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Lilo Fantasy » Feed" href="https://lilofantasy.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Lilo Fantasy » Comments Feed" href="https://lilofantasy.com/comments/feed/">
+
+<link rel="icon" href="res/img/LILO-FANTASY-ICON.png" sizes="32x32">
+<link rel="icon" href="res/img/LILO-FANTASY-ICON.png" sizes="192x192">
+<link rel="apple-touch-icon" href="res/img/LILO-FANTASY-ICON.png">
+<meta name="msapplication-TileImage" content="res/img/LILO-FANTASY-ICON.png">
+<style id="jeg_dynamic_css" type="text/css" data-type="jeg_custom-css"></style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Viga&family=Sniglet:wght@400;800&family=Ubuntu:wght@400;700&display=swap">
+<link rel="stylesheet" href="res/style.css">
+<script src="res/script.js"></script>
+</head><body>
+
+<script>
+
+const abc=(()=>{
+	
+	const a=el({a:'div', b:document.body, d:{style:'width:100vw;display:flex;flex-direction:column;padding-top:48px;'}})
+	const b=el({a:'div', b:a, d:{style:'display:flex;flex-direction:column;gap:8px;padding-bottom:15vh;'}});
+	
+	(()=>{
+		const c=el({a:'div', b:b, d:{id:'carousel2',class:'carousel1'}});
+		const d=el({a:'div', b:c});
+		el({a:'img', b:el({a:'div', b:d, d:{id:'carousel-1'}}), d:{src:'res/img/LILO-FANTASY-ICON.png'}})
+		el({a:'img', b:el({a:'div', b:d, d:{id:'carousel-2'}}), d:{src:'res/img/LILO-ICON.png'}})
+		el({a:'img', b:el({a:'div', b:d, d:{id:'carousel-3'}}), d:{src:'res/img/LOGO.png'}})
+		el({a:'img', b:el({a:'div', b:d, d:{id:'carousel-4'}}), d:{src:'res/img/LOGO-LILO-FANTASY.png'}})
+		el({a:'img', b:el({a:'div', b:d, d:{id:'carousel-5'}}), d:{src:'res/img/nftcalendar-logo.svg'}})
+		
+		const e=el({a:'div', b:c});
+		el({a:'a', b:e, d:{href:'#carousel-1'}})
+		el({a:'a', b:e, d:{href:'#carousel-2'}})
+		el({a:'a', b:e, d:{href:'#carousel-3'}})
+		el({a:'a', b:e, d:{href:'#carousel-4'}})
+		el({a:'a', b:e, d:{href:'#carousel-5'}})
+	})();
+	
+	(()=>{
+		//const c=el({a:'div', b:b, d:{style:'height:calc(40vh - 24px);background:#eee;border-radius:4px;'}})
+		const c=el({a:'div', b:b})
+		el({a:'h3', b:c, c:'Last Winner', d:{style:'margin:16px;'}})
+		const d=el({a:'div', b:c, d:{style:'display:flex;flex-direction:column;gap:16px;padding:16px;background:#ddd;'}});
+		const e=a=>{
+			const b=el({a:'div', b:a[0], d:{style:'display:flex;justify-content:space-between;align-items:center;'}});
+			el({a:'div', b:b, d:{style:'display:flex;align-items:center;gap:16px;'}});
+			el({a:'img', b:b.children[0], d:{src:a[1],style:'width:64px;height:64px;border-radius:50%;'}})
+			el({a:'div', b:b.children[0], c:a[2], d:{style:'color:rgba(0,0,0,.6);'}})
+			el({a:'div', b:b, c:a[3]})
+		}
+		e([d,imgLst.userCircle,'Jennifer Lopez','2000 $'])
+		e([d,imgLst.userCircle,'Anne Johnson','1500 $'])
+		e([d,imgLst.userCircle,'Martina Smith','1000 $'])
+		e([d,imgLst.userCircle,'Johnny Depp','750 $'])
+		e([d,imgLst.userCircle,'Miftahul Munir','500 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+	})();
+	
+	
+	(()=>{
+		//const c=el({a:'div', b:b, d:{style:'height:calc(40vh - 24px);background:#eee;border-radius:4px;'}})
+		const c=el({a:'div', b:b})
+		const c1=(()=>{
+			const a=new Date()
+			const b=new Date(a.getFullYear(), a.getMonth(), a.getDate()-(7+a.getDay()));
+			const c=['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+			return `Winner ${b.getDate()} ${c[b.getMonth()]} ${b.getFullYear()}`
+		})();
+		el({a:'h3', b:c, c:c1, d:{style:'margin:16px;'}})
+		const d=el({a:'div', b:c, d:{style:'display:flex;flex-direction:column;gap:16px;padding:16px;background:#ddd;'}});
+		const e=a=>{
+			const b=el({a:'div', b:a[0], d:{style:'display:flex;justify-content:space-between;align-items:center;'}});
+			el({a:'div', b:b, d:{style:'display:flex;align-items:center;gap:16px;'}});
+			el({a:'img', b:b.children[0], d:{src:a[1],style:'width:64px;height:64px;border-radius:50%;'}})
+			el({a:'div', b:b.children[0], c:a[2], d:{style:'color:rgba(0,0,0,.6);'}})
+			el({a:'div', b:b, c:a[3]})
+		}
+		e([d,imgLst.userCircle,'Jennifer Lawrence','2000 $'])
+		e([d,imgLst.userCircle,'Anne Marie','1500 $'])
+		e([d,imgLst.userCircle,'Martina Hingis','1000 $'])
+		e([d,imgLst.userCircle,'Johnny Plate','750 $'])
+		e([d,imgLst.userCircle,'Miftahul Munir','500 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+		e([d,imgLst.userCircle,'Lorem Ipsum','100 $'])
+	})();
+	el({a:'img', b:el({a:'div', b:document.body, d:{style:'position:fixed;top:0px;left:0px;width:100vw;height:60px;background:rgba(255,255,255,.9);'}}), d:{src:imgLst.arrowLeft,style:'position:absolute;top:20px;left:20px;width:40px;height:40px;'},e:{click:a=>{document.body.children[document.body.children.length-1].style.left=0}}});
+	M()
+})();
+
+</script>
+
+ </body></html>
