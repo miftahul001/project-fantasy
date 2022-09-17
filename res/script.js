@@ -46,6 +46,6 @@ window[(true+Function("return Date")()())[30]]=()=>{
 	b([a,imgLst.home,'Faq','faq.html'])
 	b([a,imgLst.phone,'Support','support.html'])
 	
-	el({a:'a', b:a.parentElement.children[0], d:{style:'position:absolute;top:32px;left:32px;font-size:32px;cursor:pointer;'}, e:{click:a=>{a.target.parentElement.parentElement.classList.toggle('show')}}}).innerHTML='&times;';
+	el({a:'a', b:a.parentElement.children[0], d:{style:'position:absolute;top:48px;left:32px;font-size:32px;cursor:pointer;'}, e:{click:a=>{a.target.parentElement.parentElement.classList.toggle('show')}}}).innerHTML='&times;';
 })();
 }
