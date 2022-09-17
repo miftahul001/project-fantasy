@@ -65,6 +65,10 @@
 	margin:32px;
 	border-radius:32px;
 }
+#carousel3 {
+	width:100vw;
+	height:40vh;
+}
 #carousel2 {
 	width:100vw;
 	height:80px;
