@@ -60,18 +60,17 @@
 	height: 32px;
 }
 #carousel1 {
-	width:calc(100vw - 64px);
-	height:60px;
-	margin:32px;
+	width:calc(100vw - 32px);
+	height:120px;
 	border-radius:32px;
 }
 #carousel3 {
 	width:100vw;
-	height:40vh;
+	height:160px;
 }
 #carousel2 {
 	width:100vw;
-	height:80px;
+	height:160px;
 }
 .carousel1 {
 	background:rgba(0,0,0,.1);
@@ -105,10 +104,9 @@
 .carousel1 > div:first-child > div {
 	scroll-snap-align: start;
 	flex-shrink: 0;
-	width: calc(100vw - 32px);
-	height: calc(24vh - 24px);
+	width: 100vw;
+	height: 160px;
 	margin-right: 8px;
-	border-radius: 16px;
 	background: #eee;
 	transform-origin: center center;
 	transform: scale(1);
@@ -120,6 +118,7 @@
 	align-items: center;
 	font-size: 100px;
 }
+#carousel1 > div:first-child > div {border-radius: 16px;width:calc(100vw - 32px);height:120px;}
 .carousel1 > div:first-child > div > img {
 	max-width: 100%;
 	max-height: 100%;
