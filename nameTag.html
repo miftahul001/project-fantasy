@@ -25,12 +25,12 @@
 			<span>Nama</span><span>:</span><input type="text"/>
 			<span>Kelas</span><span>:</span><input type="text"/>
 			<span>Angkatan</span><span>:</span><input type="text"/>
+			<span>Motto</span><span>:</span><input type="text"/>
 			<span></span><span></span><button>Ok</button>
 			<span></span><span></span><span></span>
 			<span></span><span></span><span></span>
 			<span></span><span></span><button>Simpan</button>
 		</div>
-		<div style="height:30px;padding:20px;"></div>
 	</div>
 <script>
 const a=document.querySelector("canvas").getContext("2d");
@@ -56,14 +56,17 @@ const img=[el({a:'img',d:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKA
 	a.fillText('2022 - 2023', (420-a.measureText('2022 - 2023').width)/2,240);
 	
 	
+	a.fillStyle='#000000';
 	a.font = '20px Viga';
 	a.fillText('NAMA', 50,470);
 	a.fillText('KELAS', 50,495);
 	a.fillText('ANGKATAN', 50,520);
+	a.fillText('MOTTO', 50,545);
 	
 	a.fillText(':', 159,468);
 	a.fillText(':', 159,493);
 	a.fillText(':', 159,518);
+	a.fillText(':', 159,543);
 	
 	//a.strokeStyle='#ffffff';
 	a.lineWidth = 2;
@@ -75,17 +78,34 @@ const img=[el({a:'img',d:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKA
 	a.lineTo(372,500);
 	a.moveTo(48,525);
 	a.lineTo(372,525);
+	a.moveTo(48,550);
+	a.lineTo(372,550);
+	a.moveTo(48,575);
+	a.lineTo(372,575);
 	a.stroke();
 	
-	a.fillText('NADIA ', 172,470);
+	a.fillText('NADIA', 172,470);
 	a.fillText('8H', 172,495);
 	a.fillText('13', 172,520);
+	(()=>{
+		a.font = '14px Viga';
+		const c='Rintangan Seberat Apapun Akan Kuhadapi, Demi Kibarkan Sang Merah Putih'.split(' ');
+		const d=[];
+		while (a.measureText(c.join(' ')).width > 198) {
+			d.unshift(c.pop());
+		}
+		console.log(c.join(' '))
+		console.log(a.measureText(c.join(' ')).width)
+		a.fillText(c.join(' '), 172,543);
+		a.fillText(d.join(' '), 50,568);
+	})();
+	//Rintangan Seberat Apapun Akan Kuhadapi, Demi Kibarkan Sang Merah Putih
 	
 	a.lineWidth = 1;
-	a.strokeRect(151,271,118,158)
+	a.strokeRect(151,256,118,158)
 	
 	a.font = '20px Viga';
-	a.fillText('3 x 4', 185,350);
+	a.fillText('3 x 4', 185,335);
 })();
 
 const b=document.querySelectorAll('button');
@@ -98,10 +118,12 @@ b[0].onclick=c=>{
 	a.fillText('NAMA', 50,470);
 	a.fillText('KELAS', 50,495);
 	a.fillText('ANGKATAN', 50,520);
+	a.fillText('MOTTO', 50,545);
 	
 	a.fillText(':', 159,468);
 	a.fillText(':', 159,493);
 	a.fillText(':', 159,518);
+	a.fillText(':', 159,543);
 	
 	//a.strokeStyle='#ffffff';
 	a.lineWidth = 2;
@@ -113,26 +135,31 @@ b[0].onclick=c=>{
 	a.lineTo(372,500);
 	a.moveTo(48,525);
 	a.lineTo(372,525);
+	a.moveTo(48,550);
+	a.lineTo(372,550);
+	a.moveTo(48,575);
+	a.lineTo(372,575);
 	a.stroke();
 	
 	const b=document.querySelectorAll('input');
-	console.log(b[0].value)
 	a.fillText(b[0].value, 172,470);
 	a.fillText(b[1].value, 172,495);
 	a.fillText(b[2].value, 172,520);
+	(()=>{
+		a.font = '14px Viga';
+		const c=b[3].value.split(' ');
+		const d=[];
+		while (a.measureText(c.join(' ')).width > 198) {
+			d.unshift(c.pop());
+		}
+		console.log(c.join(' '))
+		console.log(a.measureText(c.join(' ')).width)
+		a.fillText(c.join(' '), 172,543);
+		a.fillText(d.join(' '), 50,568);
+	})();
+	//Rintangan Seberat Apapun Akan Kuhadapi, Demi Kibarkan Sang Merah Putih
 }
 b[1].onclick=b=>{a.canvas.toBlob(a=>{const b=el({a:'a',b:document.body,d:{download:'nameTag.png',href:URL.createObjectURL(a)}});b.click();document.body.removeChild(b)})}
-//const b=el({a:'img',d:{src:'nad4.png'}})
-//b.onload=c=>{a.drawImage(b,220,280,780,1040, 150,270,120,160)}
-
-//const b=el({a:'img',d:{src:'nad4.png'}})
-//b.onload=c=>{a.drawImage(b,180,80,900,1200, 150,270,120,160)}
-
-//const b=el({a:'img',d:{src:'nad5.png'}})
-//b.onload=c=>{a.drawImage(b,100,80,900,1200, 150,270,120,160)}
-
-//const b=el({a:'img',d:{src:'nad6.png'}})
-//b.onload=c=>{a.drawImage(b,180,80,900,1200, 150,270,120,160)}
 
 </script>
 
