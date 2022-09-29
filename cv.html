@@ -19,10 +19,10 @@ jsPDF = jspdf.jsPDF;
 const doc = new jsPDF('p', 'pt', [ 595.28,  841.89]);
 var ubuntu, ubuntuBold;
 // add the font to jsPDF
-doc.addFileToVFS("Ubuntu/Ubuntu-Regular.ttf", ubuntu);
-doc.addFont("Ubuntu/Ubuntu-Regular.ttf", "ubuntu", "normal");
-doc.addFileToVFS("Ubuntu/Ubuntu-Bold.ttf", ubuntuBold);
-doc.addFont("Ubuntu/Ubuntu-Bold.ttf", "ubuntuBold", "normal");
+doc.addFileToVFS("res/fonts/Ubuntu-Regular.ttf", ubuntu);
+doc.addFont("res/fonts/Ubuntu-Regular.ttf", "ubuntu", "normal");
+doc.addFileToVFS("res/fonts/Ubuntu-Bold.ttf", ubuntuBold);
+doc.addFont("res/fonts/Ubuntu-Bold.ttf", "ubuntuBold", "normal");
 
 const a=document.createElement('canvas').getContext('2d');
 a.canvas.width = 595;
