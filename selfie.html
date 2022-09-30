@@ -16,17 +16,14 @@ div {
 	gap:8px;
 	padding:0;
 }
-div canvas:first-child {
-	max-height:80vh;
-}
-div div {
+div > div:last-child {
 	flex-direction:row;
 	flex-wrap:wrap;
 	padding:8px;
 	background: #ddd;
 	border-radius:8px;
 }
-div div canvas {
+div > div:last-child > canvas {
 	width:64px;
 	height:64px;
 	cursor:pointer;
@@ -34,7 +31,7 @@ div div canvas {
 </style>  
 </head><body>
 <div>
-	<canvas></canvas>
+	<div><canvas></canvas></div>
 	<div>
 		<button onclick="reqWebcam(event)">Start Camera</button>
 	</div>
