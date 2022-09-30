@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selfie – Mediapipe Selfie Segmentation</title>
+<meta name="description" content="Selfie">
+<meta name="keywords" content="Camera, background, selfie, mediapipe">
+<meta name="author" content="Miftahul Munir">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Viga&family=Ubuntu:wght@400;700&display=swap">
+<script src="res/selfie_segmentation.js"></script>
+
+<style>
+div {
+	display:flex;
+	flex-direction:column;
+	gap:8px;
+	padding:0;
+}
+div div {
+	flex-direction:row;
+	flex-wrap:wrap;
+	padding:8px;
+	background: #ddd;
+	border-radius:8px;
+}
+div div canvas {
+	width:64px;
+	height:64px;
+	cursor:pointer;
+}
+</style>  
+</head><body>
+<div>
+	<canvas></canvas>
+	<div>
+		<button onclick="reqWebcam(event)">Start Camera</button>
+	</div>
+	<div>
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+</div>
+
+<script>
+const vid = document.createElement('video');
+const ctx = document.querySelector('canvas').getContext('2d');
+const img = document.createElement('img');
+(()=>{
+	const a=a=>{
+		a.a.canvas.width=640;
+		a.a.canvas.height=480;
+		a.a.fillStyle=a.b;
+		a.a.fillRect(0,0,640,480);
+		a.a.canvas.onclick=a=>{img.src=a.target.toDataURL()}
+	}
+	const b=document.querySelectorAll('canvas');
+	a({a:b[1].getContext('2d'),b:'#ff0000'});
+	a({a:b[2].getContext('2d'),b:'#00ff00'});
+	a({a:b[3].getContext('2d'),b:'#0000ff'});
+	a({a:b[4].getContext('2d'),b:'#ffffff'});
+	a({a:b[5].getContext('2d'),b:'#000000'});
+	//a({a:b[6].getContext('2d'),b:'#aaa'});
+	img.src=b[1].toDataURL();
+	//b[6].onclick=a=>{
+	//}
+})();
+
+const frame=a=>{selfieSegmentation.send({image:vid})}
+const selfieSegmentation = new SelfieSegmentation({locateFile:a=>`res/${a}`});
+selfieSegmentation.setOptions({modelSelection: 1});
+selfieSegmentation.onResults(a=>{
+	ctx.save();
+	ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
+	ctx.drawImage(a.segmentationMask, 0,0, ctx.canvas.width, ctx.canvas.height);
+	ctx.globalCompositeOperation = 'source-out';
+	ctx.drawImage(img,0,0);
+	ctx.globalCompositeOperation = 'destination-atop';
+	ctx.drawImage(a.image, 0, 0, ctx.canvas.width, ctx.canvas.height);
+	ctx.restore();
+	if(!vid.paused)requestAnimationFrame(frame);
+});
+vid.onloadedmetadata=()=>{
+	ctx.canvas.width = vid.videoWidth;
+	ctx.canvas.height = vid.videoHeight;
+	frame();
+}
+reqWebcam=a=>{
+	if (a.target.textContent === 'Start Camera') {
+		navigator.mediaDevices.getUserMedia({video:true, audio:false}).then(s=>{vid.srcObject=s;vid.play()})
+		a.target.textContent='Stop Camera'
+	} else {
+		a.target.textContent='Start Camera';
+		vid.pause();
+		vid.srcObject.getTracks().forEach(a=>a.stop());
+	}
+}
+</script>
+</body>
+</html>
